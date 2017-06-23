@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五环</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 700px;
+            height: 400px;
+            position: relative;
+            margin: 100px auto;
+        }
+        .circle,.circle::after{
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius:50% ;
+            position: absolute;
+        }
+        .circle::after{
+            content: '';
+            left: -10px;
+            top: -10px;
+        }
+        .blue{
+           border-color: blue;
+        }
+        .blue::after{
+            border-color: blue;
+            z-index: 1;
+            border-bottom: transparent;
+        }
+        .yellow{
+            border-color: yellow;
+            left: 230px;
+        }
+        .yellow::after{
+            border-color:yellow;
+            z-index: 1;
+            border-left-color:transparent ;
+        }
+        .red{
+            border-color: red;
+            left: 460px;
+        }
+        .red::after{
+            border-color:red;
+            z-index: 1;
+            border-left-color:transparent ;
+        }
+        .black{
+            border-color: black;
+            left: 340px;
+            top: 110px;
+
+        }
+        .black::after{
+            border-color:black;
+            z-index: 1;
+            border-top-color:transparent;
+            border-right-color: transparent;
+        }
+        .green{
+            border-color: green;
+            left: 100px;
+            top: 110px;
+        }
+        .green::after{
+            border-color:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="circle blue"></div>
+        <div class="circle yellow"></div>
+        <div class="circle red"></div>
+        <div class="circle green"></div>
+        <div class="circle black"></div>
+    </div>
+</body>
+</html>
